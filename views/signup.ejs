@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/head2.ejs')%>
+
+    <body>
+        <%-include('./partials/nav.ejs')%>
+            <div class="create-blog content">
+                <form action="/login" method="POST">
+                    <label for="username">username</label>
+                    <input type="text" id="username" required name="username">
+                    <label for="email">email</label>
+                    <input type="text" id="email" required name="email">
+                    <label for="password">password</label>
+                    <input id="password" required name="password" type="password">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <script>
+                const form = document.querySelector('form')
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    //get values
+                    const username = form.username.value;
+                    const email = form.email.value;
+                    const password = form.password.value;
+                    try {
+                        const res = await fetch('/signup', {
+                            method: 'POST',
+                            body: JSON.stringify({ username: username,email:email,password: password, }),
+                            headers: { 'Content-Type': 'application/json' }
+                        });
+                        const data = await res.json();
+                        console.log(data)
+                        if (data.errors) {
+                            alert(data.errors.username + data.errors.password);
+                        }
+                        if (data.u1) {
+                            location.assign('/login');
+                        }
+                    }
+                    catch (err) {
+                        console.log(err)
+                    }
+                });
+            </script>
+    </body>
+    <%-include('./partials/footer.ejs')%>
+
+</html>

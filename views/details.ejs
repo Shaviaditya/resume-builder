@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <body>
+        <div class="details content">
+            <h2>
+                <%=resume.name%>
+            </h2>
+            <div class="content">
+                <div class="section">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li><i class="fa fa-envelope"></i>
+                            <%=resume.email%>
+                        </li>
+                        <li><i class="fa fa-phone"></i>
+                            <%=resume.phone%>
+                        </li>
+                        <li><i class="fa fa-home"></i>
+                            <%=resume.address%>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>EDUCATION</h3>
+                    <% resume.education.forEach(function(edu) { %>
+                        <ul>
+                            <li><strong>
+                                    <%=edu.degree%>
+                                </strong></li>
+                            <li>
+                                <%=edu.school%>
+                            </li>
+                            <li>
+                                <%=edu.location%>
+                            </li>
+                        </ul>
+                        <% }) %>
+                </div>
+                <br>
+                <div class="section">
+                    <h3>EXPERIENCE</h3>
+                    <% resume.experience.forEach(function(exp) { %>
+                        <ul>
+                            <li><strong>
+                                    <%=exp.position%>
+                                </strong></li>
+                            <li>
+                                <%=exp.company%>
+                            </li>
+                            <li>
+                                <%=exp.location%>
+                            </li>
+                            <li>
+                                <%=exp.desc%>
+                            </li>
+                        </ul>
+                        <% }) %>
+                </div>
+                <br>
+                <div class="section">
+                    <h3>SKILLS</h3>
+                    <ul>
+                        <% resume.skills.forEach(function(skill) { %>
+                            <li>
+                                <%=skill.name%>
+                            </li>
+                            <li>
+                                <%=skill.level%>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <%-include('./partials/footer.ejs')%> -->
+        <input type="button" value="Print" onclick="printDiv()">
+        <script>
+            function printDiv() {
+                var printContents = document.getElementsByClassName('details content')[0].innerHTML;
+                // console.log(document.getElementsByClassName('details content')[0].innerHTML)
+                var originalContents = document.body.innerHTML;
+                document.body.innerHTML = printContents;
+                window.print();
+                document.body.innerHTML = originalContents;
+            }
+        </script>
+        </div>
+    </body>
+
+</html>

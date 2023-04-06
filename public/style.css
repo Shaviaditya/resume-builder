@@ -1,0 +1,290 @@
+/* body {
+    background-color: #F5F5F5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+h1, h2, h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.section h3 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.section li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.section li i {
+    margin-right: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #4A4A4A;
+}
+
+.section li strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.left {
+    width: 30%;
+    float: left;
+}
+
+.right {
+    width: 70%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
+
+    .left, .right {
+        width: 100%;
+        float: none;
+    }
+
+    .left {
+        margin-bottom: 10px;
+    }
+
+    .clear {
+        clear: both;
+    }
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .section ul li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  
+  .section ul li strong {
+    font-weight: 700;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .resume-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+   */
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  h2, h3 {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .content {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Header styles */
+  .details h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Contact styles */
+  .details .section ul li i {
+    color: #777;
+    margin-right: 10px;
+  }
+  
+  .details .section ul li strong {
+    font-weight: normal;
+    color: #444;
+  }
+  
+  /* Education styles */
+  .details .section ul li strong {
+    font-size: 16px;
+  }
+  
+  .details .section ul li:not(:first-child) {
+    margin-left: 20px;
+  }
+  
+  /* Experience styles */
+  .details .section ul li strong {
+    font-size: 16px;
+  }
+  
+  .details .section ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Skills styles */
+  .details .section ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .details .section ul li:not(:first-child) {
+    margin-left: 20px;
+  }
+  
+  .details .section ul li:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .details {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  
+  .section:last-child {
+    margin-right: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  h2,
+  h3 {
+    font-weight: normal;
+  }
+  
+  h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .section {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  

@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <%-include('./partials/nav.ejs')%> 
+    <div class="blogs content">
+        <h2>All blogs</h2>
+        <% if(blogs.length > 0){ %>
+            <% blogs.forEach(blog=>{%>
+                <a class="single" href="/blogs/<%=blog.id%> ">
+                    <h3 class="title"><%=blog.title%></h3>
+                    <p class="snippet"><%=blog.snippet%></p>
+                </a>
+            <%})%>
+        <% } %>
+    </div>
+</body>
+<%-include('./partials/footer.ejs')%>
+</html> -->
+
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "phone": "+1 123-456-7890",
+  "address": "123 Main St, Anytown USA 12345",
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University of XYZ",
+      "location": "Anytown USA",
+      "date": "May 2020"
+    },
+    {
+      "degree": "High School Diploma",
+      "school": "Anytown High School",
+      "location": "Anytown USA",
+      "date": "June 2016"
+    }
+  ],
+  "experience": [
+    {
+      "company": "ABC Inc.",
+      "location": "Anytown USA",
+      "position": "Software Engineer",
+      "startDate": "June 2020",
+      "endDate": "Present",
+      "description": "Developed web applications using React and Node.js."
+    },
+    {
+      "company": "XYZ Corp.",
+      "location": "Anytown USA",
+      "position": "Intern",
+      "startDate": "June 2019",
+      "endDate": "May 2020",
+      "description": "Assisted with software testing and documentation."
+    }
+  ],
+  "skills": "HTML/CSS/JavaScript;Intermediate,React;Intermediate,Node.js;Beginner"
+}
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <%-include('./partials/nav.ejs')%> 
+    <div class="details content">
+        <h2><%=blog.title%> </h2>
+        <div class="content">
+            <p><%=blog.body%> </p>
+        </div>
+        <a class="delete" data-doc="<%=blog.id%>">Delete</a>
+    </div>
+    <%-include('./partials/footer.ejs')%>
+    </div>
+    <script>
+        const trashcan = document.querySelector('a.delete');
+        trashcan.addEventListener('click',(e)=>{
+            const endpoint = `/blogs/${trashcan.dataset.doc}`;
+            fetch(endpoint,{
+                method: 'DELETE'
+            })
+            .then((response)=>response.json())
+            .then((data)=>window.location.href = data.redirect)
+            .catch(err=>console.log(err))
+        })
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- <script>
+        const trashcan = document.querySelector('a.delete');
+        trashcan.addEventListener('click',(e)=>{
+            const endpoint = `/resumes/${trashcan.dataset.doc}`;
+            fetch(endpoint,{
+                method: 'DELETE'
+            })
+            .then((response)=>response.json())
+            .then((data)=>window.location.href = data.redirect)
+            .catch(err=>console.log(err))
+        })
+    </script> -->
